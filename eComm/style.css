@@ -4,10 +4,17 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+@media (min-width: 600px) and (max-width: 800px) {
+    body{
+        background-color: red;
+    }
+   
+}
+
 .main{
     height: 100vh;
     width: 100vw;
-    background-color: #ffffff;
+    
 }
 
 nav{
@@ -83,6 +90,18 @@ nav{
     row-gap: 20px;
 }
 
+@media (max-width: 800px) {
+    .trending-product-items{
+       grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 599px) {
+    .trending-product-items{
+    grid-template-columns: 1fr;
+}
+}
+
 .card{
     height: 300px;
     width: 300px;
@@ -104,8 +123,21 @@ nav{
     box-sizing: border-box;
     padding: 0 50px;
     margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+    .category{
+       grid-template-columns: repeat(4, 1fr);
+}
+}+
+
+@media (max-width: 400px) {
+    .category{
+       grid-template-columns: repeat(4, 1fr);
+}
 }
 
 .category-item{
