@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+    /* background-color: #D5CDC2; */
+}
+
+.hero-section{
+    min-height: 100vh;
+    background-image: url(images/image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+   display: flex;
+   justify-content: space-between;
+   box-sizing: border-box;
+   padding: 0 10%;
+   height: 80px;
+   border-bottom: 1px solid #000;
+}
+
+.logo-section{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
+}
+
+.logo-items{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-items li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.cart-section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+#login-btn{
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-main{
+    box-sizing: border-box;
+    padding: 50px 10%;
+}
+
+.hero-main p{
+    font-size: 78px;
+}
+
+.main-card-section{
+    display: flex;
+    gap: 20px;
+}
+
+.card{
+    height: 250px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 70%;
+}
+
+.card.visible{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card:hover{
+    
+}
+
+
+
+
