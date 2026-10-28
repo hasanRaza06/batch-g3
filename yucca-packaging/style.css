@@ -23,29 +23,54 @@ nav{
    border-bottom: 1px solid #000;
 }
 
+nav:hover{
+    background-color: rgb(240, 236, 236);
+}
+
 .logo-section{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
     font-size: 20px;
 }
 
 .logo-items{
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
 }
 
 .logo-items li{
     list-style: none;
     cursor: pointer;
+    position: relative;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 400;
 }
+
+.logo-items li::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.logo-items li:hover::after {
+    transform: scaleX(1);
+}
+
 
 .cart-section{
     display: flex;
     align-items: center;
     gap: 20px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #login-btn{
@@ -66,11 +91,12 @@ nav{
 }
 
 .main-card-section{
+    position: relative;
     display: flex;
     gap: 20px;
 }
 
-.card{
+.card {
     height: 250px;
     width: 250px;
     background-color: #fff;
@@ -79,17 +105,70 @@ nav{
     justify-content: center;
     align-items: center;
     opacity: 70%;
+    position: relative;
+    overflow: hidden;
 }
 
-.card.visible{
+.card .visible {
     font-size: 20px;
     font-weight: bold;
+    margin: 0;
+    transition: opacity 0.8s ease;
 }
 
-.card:hover{
-    
+.card .hidden {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
+.card:hover .visible {
+    opacity: 0;
+}
 
+.card:hover .hidden {
+    opacity: 1;
+    visibility: visible;
+}
 
+.slider-section{
+    height: 150vh;
+    background-color: #DFDAC6;
+    background-image: url(images/sliderImage.webp);
+    background-position: center;
+    background-size: 800px;
+    background-repeat: no-repeat;
+    position: relative;
+}
 
+.runner-section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+marquee{
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.bottom-section{
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
